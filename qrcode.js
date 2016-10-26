@@ -29,7 +29,7 @@ var QRCode;
 	function QR8bitByte(data) {
 		this.mode = QRMode.MODE_8BIT_BYTE;
 		
-		this.data = data.replace(";", "\015");;
+		this.data = data.replace(/;/g, "\015");
 		this.parsedData = [];
 
 		// Added to support UTF-8 Characters
